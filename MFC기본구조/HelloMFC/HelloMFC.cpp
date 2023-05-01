@@ -47,7 +47,11 @@ void CMainFrame::OnPaint()
 
 void CMainFrame::OnLButtonDown(UINT nFlags, CPoint point)
 {
-	MessageBox(_T("마우스 클릭"), _T("마우스 메시지"));
+	// MessageBox(_T("마우스 클릭"), _T("마우스 메시지"));
+	TRACE(_T("응용 프로그램 객체 주소: %p = %p\n"), AfxGetApp(), &theAPP);
+	TRACE(_T("메인 윈도우 객체 주소: %p = %p\n"), AfxGetMainWnd(), &theAPP.m_pMainWnd);
+	TRACE(_T("응용 프로그램 이름: %s\n"), AfxGetAppName());
+	TRACE(_T("인스턴스 핸들 : %p"), AfxGetInstanceHandle());
 }
 
 // 메시지 맵을 선언한다.
